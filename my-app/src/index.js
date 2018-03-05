@@ -8,11 +8,10 @@ import configureStore from './helper/store/configureStore';
 import registerServiceWorker from './registerServiceWorker';
 registerServiceWorker();
 
-
 const store = configureStore();
 
 const renderApp = Component => {
-    render(<Component store={store}/>,
+    render(<Component store={store} history={history} />,
         document.getElementById('root')
     );
 };

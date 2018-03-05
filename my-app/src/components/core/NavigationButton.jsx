@@ -17,7 +17,7 @@ export class NavigationButton extends Component {
     }
 }
 
-LONavigationButton.propTypes = {
+NavigationButton.propTypes = {
     name: PropTypes.string,
     path: PropTypes.string
 };
