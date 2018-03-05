@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import NavigationButton from './LONavigationButton';
+import NavigationButton from './NavigationButton';
 
 export class MainHeader extends Component {
     render() {

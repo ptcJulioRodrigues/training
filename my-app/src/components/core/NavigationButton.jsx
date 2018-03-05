@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-export class LONavigationButton extends Component {
+export class NavigationButton extends Component {
     render() {
         const { name, path } = this.props;
         return (
@@ -22,5 +22,5 @@ LONavigationButton.propTypes = {
     path: PropTypes.string
 };
 
-export default LONavigationButton;
+export default NavigationButton;
 

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { updateTodoAC as updateTodo } from './../../actions/todoActions';
+import { updateTodo as updateTodo } from '../../actionsCreators/todoActions';
 import { connect } from 'react-redux';
 
 export class Todo extends Component {

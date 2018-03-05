@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export class LONotFound extends Component {
+export class NotFound extends Component {
     render() {
         return (
             <div className="LONotFound">
@@ -10,5 +10,5 @@ export class LONotFound extends Component {
     }
 }
 
-export default LONotFound;
+export default NotFound;
 

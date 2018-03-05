@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-export class LOWelcome extends Component {
+export class Welcome extends Component {
     render() {
         return (
-            <div className="LOWelcome">
+            <div className="Welcome">
                 <h1>Welcome</h1>
             </div>
         );
     }
 }
 
-export default LOWelcome;
+export default Welcome;

@@ -5,8 +5,9 @@ import {
     UPDATE_TODO,
     DELETE_TODO
 } from '../constants/actions/todoActions';
+import todoState from '../constants/state/todoState';
 
-export default (state = {}, action = {}) => {
+export default (state = todoState, action = {}) => {
     switch (action.type) {
         case FETCH_TODO:
             return {};
