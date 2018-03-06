@@ -11,7 +11,7 @@ registerServiceWorker();
 const store = configureStore();
 
 const renderApp = Component => {
-    render(<Component store={store} history={history} />,
+    render(<Component store={store} /*history={history}*/ />,
         document.getElementById('root')
     );
 };

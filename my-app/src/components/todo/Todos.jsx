@@ -1,21 +1,26 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import Todo from './Todo';
 
 export class Todos extends Component {
-
     render() {
-
         return (
             <div className="Todos">
-                <h1>Todos List</h1>
-                <Todo id={1}/>
-                <Todo id={4}/>
+                {this.props.todos.map(id => <Todo id={id} />)}
             </div>
         );
     }
 }
 
-Todos.propTypes = {};
+Todos.propTypes = {
+    todos: PropTypes.array
+};
 
-export default Todos;
+export const mapStateToProps = (state, ownProps) => ({
+    todos: Object.keys(state.todo)
+});
+
+export default connect(mapStateToProps)(Todos);
+
 
