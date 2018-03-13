@@ -4,6 +4,16 @@ import { FETCH_TODO, CREATE_TODO, READ_TODO, UPDATE_TODO, DELETE_TODO }
 from '../../constants/actions/actions';
 
 const initialState = { 1: { description: '', done: false }, 2: { description: '', done: false } };
+it('should return State when receive action of unknown type', () => {
+    //arrange
+    const expectedState = initialState;
+    const sentAction = { type: '' };
+    //act
+    const actualResult = todoReducer(initialState, sentAction);
+    //assert
+    expect(actualResult).toEqual(expectedState);
+});
+
 it('should return an empty State when receive action of type FETCH_TODO', () => {
     //arrange
     const expectedState = {};
@@ -16,8 +26,12 @@ it('should return an empty State when receive action of type FETCH_TODO', () => 
 
 it('should return an empty State when receive action of type CREATE_TODO', () => {
     //arrange
-    const expectedState = {};
-    const sentAction = { type: CREATE_TODO, description: 'some description', done: false, id: 1 };
+    const expectedState = {
+        1: {description: '', done: false},
+        2: {description: '', done: false},
+        3: {description: 'new todo', done: false}
+    };
+    const sentAction = { type: CREATE_TODO, description: 'new todo', done: false, id: 3 };
     //act
     const actualResult = todoReducer(initialState, sentAction);
     //assert
@@ -36,8 +50,10 @@ it('should return an empty State when receive action of type READ_TODO', () => {
 
 it('should return an empty State when receive action of type DELETE_TODO', () => {
     //arrange
-    const expectedState = {};
-    const sentAction = { type: DELETE_TODO, description: 'some description', done: false, id: 1 };
+    const expectedState = {
+        1: {description: '', done: false}
+    };
+    const sentAction = { type: DELETE_TODO, description: 'some description', done: false, id: 2 };
     //act
     const actualResult = todoReducer(initialState, sentAction);
     //assert

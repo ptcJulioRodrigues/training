@@ -5,7 +5,7 @@ import NotFoundPage from './NotFound';
 import PageWrapper from './PageWrapper';
 import Todos from './../todo/Todos';
 
-export class Base extends Component {
+export class Engine extends Component {
     render() {
         return (
             <PageWrapper>
@@ -24,5 +24,5 @@ export class Base extends Component {
     }
 }
 
-export default withRouter(Base);
+export default withRouter(Engine);
 

@@ -8,26 +8,25 @@ import {
 import todoState from '../constants/state/todoState';
 
 export default (state = todoState, action = {}) => {
-    switch (action.type) {
+    const { type, description, done, id } = action;
+    switch (type) {
         case FETCH_TODO:
             return {};
         case CREATE_TODO:
-            return {};
+            return {...state, [id]: {description, done}};
         case READ_TODO:
             return {};
         case UPDATE_TODO:
-            const { description, done, id } = action;
-            const updatedTodo = {};
-            updatedTodo[id] = { description, done };
             return {
                 ...state,
-                ...updatedTodo
+                [id]: { description, done }
             };
-        case
-        DELETE_TODO:
-            return {};
+        case DELETE_TODO:
+            const stateDeleted = {...state};
+            delete stateDeleted[id];
+            return stateDeleted;
         default:
-            return {};
+            return state;
     }
 };
 

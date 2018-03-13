@@ -11,7 +11,8 @@ registerServiceWorker();
 const store = configureStore();
 
 const renderApp = Component => {
-    render(<Component store={store} /*history={history}*/ />,
+    //eslint-disable-next-line
+    render(<Component store={store} history={history} />,
         document.getElementById('root')
     );
 };

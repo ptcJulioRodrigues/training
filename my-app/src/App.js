@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { HashRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import {Base} from './components/core/Base';
+import { Engine } from './components/core/Engine';
 
 class App extends Component {
     render() {
@@ -11,7 +11,7 @@ class App extends Component {
         return (
             <Provider store={store}>
                 <Router>
-                    <Base />
+                    <Engine />
                 </Router>
             </Provider>
         );
