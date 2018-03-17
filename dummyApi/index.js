@@ -11,7 +11,9 @@ const app = express();
 app.use(cors());
 
 app.get('/v0/contacts/', (req, res) => {
-  res.json(contacts);
+
+    setTimeout((() => res.json(contacts)), 2000);
+
 });
 
 const matchResults = (data, path, value) => data.filter(item => {

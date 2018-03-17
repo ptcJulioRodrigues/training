@@ -9,6 +9,7 @@ export class MainHeader extends Component {
                     <ul className="nav navbar-nav">
                         <NavigationButton name={'home'} path={'#/home'} />
                         <NavigationButton name={'todo'} path={'#/todo'} />
+                        <NavigationButton name={'contacts'} path={'#/contacts'} />
                     </ul>
                 </nav>
             </div>

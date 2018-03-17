@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import { Redirect, Route, Switch, withRouter } from 'react-router-dom';
-import Welcome from './Welcome';
-import NotFoundPage from './NotFound';
+import asyncComponent from './AsyncComponent';
 import PageWrapper from './PageWrapper';
-import Todos from './../todo/Todos';
+
+const AsyncContacts = asyncComponent(() => import('./../contacts/Contacts'));
+const AsyncTodos = asyncComponent(() => import('./../todo/Todos'));
+const AsyncWelcome = asyncComponent(() => import('./Welcome'));
+const AsyncNotFound = asyncComponent(() => import('./NotFound'));
 
 export class Engine extends Component {
     render() {
@@ -11,12 +14,12 @@ export class Engine extends Component {
             <PageWrapper>
                 <div id="App" className="app-body">
                     <Switch>
-                        <Route path="/home" component={Welcome} />
-                        <Route path="/todo" component={Todos} />
-                        <Route path="/somePath" component={Welcome} />
-                        <Route path="/somePath2" component={Welcome} />
+                        <Route path="/home" component={AsyncWelcome} />
+                        <Route path="/todo" component={AsyncTodos} />
+                        <Route path="/contacts" component={AsyncContacts} />
+                        <Route path="/somePath2" component={AsyncWelcome} />
                         <Redirect exact from="/" to="/home" />
-                        <Route component={NotFoundPage} />
+                        <Route component={AsyncNotFound} />
                     </Switch>
                 </div>
             </PageWrapper>

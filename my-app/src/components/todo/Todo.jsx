@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { updateTodo as updateTodo } from '../../actionsCreators/todoActions';
+import { updateTodo } from '../../actionsCreators/todoActions';
 
 export class Todo extends Component {
     onCheckboxChange(event) {
