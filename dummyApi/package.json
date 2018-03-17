@@ -1,0 +1,13 @@
+{
+    "name": "dummy-api",
+    "version": "0.0.2",
+    "description": "Dummy api",
+    "main": "index.js",
+    "dependencies": {
+        "cors": "^2.7.1",
+        "express": "^4.13.3"
+    },
+    "scripts": {
+        "start": "node index.js"
+    }
+}

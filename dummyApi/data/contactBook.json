@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Julio Rodrigues",
+        "phone-number": 939179107,
+        "active": true
+    },
+    {
+        "id": 2,
+        "name": "Jose Almeida",
+        "phone-number": 911111111,
+        "active": true
+    },
+    {
+        "id": 3,
+        "name": "Ana Martins",
+        "phone-number": 966666666,
+        "active": true
+    },
+    {
+        "id": 4,
+        "name": "Filipa Oliveira",
+        "phone-number": 922222222,
+        "active": true
+    }
+]
