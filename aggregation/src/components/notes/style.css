@@ -1,0 +1,95 @@
+
+/***************************************************************************/
+/***************************  Create a Trash  ******************************/
+/***************************************************************************/
+element {
+	--main-width: 66;
+	--main-height: 80;
+}
+
+.ico-supprimer {
+	left: 37px;
+	background:#3e3e3e;
+	width: var(--main-width)px;
+	height: var(--main-height)px;
+	display: inline-block;
+	margin:0 auto;
+
+	position: relative;
+	-webkit-border-bottom-right-radius: 6px;
+	-webkit-border-bottom-left-radius: 6px;
+	-moz-border-radius-bottomright: 6px;
+	-moz-border-radius-bottomleft: 6px;
+	border-bottom-right-radius: 6px;
+	border-bottom-left-radius: 6px;
+}
+.ico-supprimer:after {
+	position: absolute;
+	left: -99px;
+	right: 0;
+	bottom: -50px;
+	width: 300px;
+}
+.ico-supprimer span {
+	position: absolute;
+	height: 12px;
+	background: #3e3e3e;
+	top: -19px;
+	left: -10px;
+	right: -10px;
+
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	transform: rotate(0deg);
+	transition: transform 250ms;
+	transform-origin: 19% 100%;
+}
+.ico-supprimer span:after {
+	content: '';
+	position: absolute;
+	width: 27px;
+	height: 7px;
+	background: #3e3e3e;
+	top: -10px;
+
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	transform: rotate(0deg);
+	transition: transform 250ms;
+	transform-origin: 19% 100%;
+	left: 27px;
+}
+
+.ico-supprimer i {
+	position:relative;
+	width: 5px;
+	height:50px;
+	background:#fff;
+	display:block;
+	margin:14px auto;
+	border-radius: 5px;
+}
+.ico-supprimer i:after {
+	content: '';
+	width: 5px;
+	height: 50px;
+	background: #fff;
+	position: absolute;
+	left: -18px;
+	border-radius: 5px;
+}
+.ico-supprimer i:before {
+	content: '';
+	width: 5px;
+	height: 50px;
+	background: #fff;
+	position: absolute;
+	right: -18px;
+	border-radius: 5px;
+}
+
+/*animate*/
+.ico-supprimer:hover span {
+	transform: rotate(-45deg);
+	transition: transform 250ms;
+}

@@ -10,6 +10,7 @@
     "react-redux": "^5.0.2",
     "react-router-dom": "^4.2.0",
     "react-scripts": "1.1.1",
+    "react-test-renderer": "^16.2.0",
     "redux": "^3.7.2",
     "redux-ignore": "^1.2.4",
     "redux-logger": "^3.0.6",
@@ -24,6 +25,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom"
+    "test": "react-scripts test --env=jsdom",
+    "coverage": "npm test -- --coverage"
   }
 }
